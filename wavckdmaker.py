@@ -3,7 +3,7 @@ from os.path import basename
 from subprocess import Popen
 makedirs('output/temp')
 for audio in listdir("input/"):
-	audioname = f'{basename(audio)}.wav'
+	audioname = f'{basename(audio).split(".")[0]}.wav'
 	Popen(['ffmpeg'
 		   '-i',
 		   f'input/{audio}',
